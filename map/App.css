@@ -1,4 +1,39 @@
 
+button {
+  cursor: pointer;
+}
+
+.help {
+  position: absolute;
+  z-index: 10;
+  border: 2px solid yellowgreen;
+  border-radius: 10px;
+  background-color: rgba(222,222,255, 0.9);
+  display: none;
+}
+.help.show {
+  display: inline-block;
+}
+  .help button {
+    font-weight: bold;
+    font-style: italic;
+    background-color: yellow;
+    border-radius: 8px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+  }
+  .content {
+    display: none;
+    width: 400px;
+    font-weight: bold;
+    font-style: italic;
+    margin: 1.1rem;
+  }
+  .content.show {
+    display: block;
+  }
+
 .graph-center text {
   font-weight: bold;
   font-size: larger;
