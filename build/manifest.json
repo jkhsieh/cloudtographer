@@ -1,0 +1,28 @@
+{
+	"short_name": "Cloudtographer!",
+	"name": "Cloudtographer!",
+	"version": "0.1",
+	"icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+	"description" : "Map your brain as you surf the web! Better and more fun than bookmarks, lists, & scattered notes.",
+	"manifest_version": 2,
+	"background": {
+		"persistent": false,
+		"scripts": ["background.js"]
+	},
+	"browser_action": {
+		"default_popup": "index.html"
+	},
+	"content_scripts": [ {
+			"all_frames": true,
+			"js": [ "content-action.js" ],
+			"matches": [ "http://*/*", "https://*/*", "file://*/*" ]
+	} ],
+	"permissions": [
+		"activeTab", "tabs", "storage", "contextMenus",
+		"http://*/*", "https://*/*", "file://*/*"
+	],
+	"web_accessible_resources": ["*.html"],
+	"content_security_policy": "script-src 'self'; object-src 'self'"
+}
